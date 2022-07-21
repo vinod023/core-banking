@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "core-banking",
+		"_postman_id": "81871492-c426-c1d6-4409-8b056ac0973b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transaction",
+			"request": {
+				"url": "http://localhost:8000/transaction",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":5,\n\t\"transactionType\":\"TRANSFER\",\n\t\"amount\":589,\n\t\"transUserId\":1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "transactionhistory",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/transactionhistory?userId=5&amount=50&balance=20&transactionType=WITHDRAW,TRANSFER&startDate=2022-07-18&endDate=2022-07-19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transactionhistory"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "5",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "amount",
+							"value": "50",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "balance",
+							"value": "20",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "transactionType",
+							"value": "WITHDRAW,TRANSFER",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "startDate",
+							"value": "2022-07-18",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-19",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
