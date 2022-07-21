@@ -1,5 +1,5 @@
 # core-banking
-Small banking application demo
+Banking application demo
 
 MYSQL-DB used for this application
 
